@@ -1,0 +1,617 @@
+<html>
+ 	<head>
+		<title>My Index File</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/fonts/ptsans/stylesheet.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/fluid.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="css/mws.style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/icons/16x16.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/icons/24x24.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/icons/32x32.css" media="screen" />
+
+<!-- Demo and Plugin Stylesheets -->
+<link rel="stylesheet" type="text/css" href="css/demo.css" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="plugins/colorpicker/colorpicker.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="plugins/imgareaselect/css/imgareaselect-default.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="plugins/fullcalendar/fullcalendar.print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="plugins/chosen/chosen.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="plugins/prettyphoto/css/prettyPhoto.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="plugins/tipsy/tipsy.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="plugins/sourcerer/Sourcerer-1.2.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="plugins/jgrowl/jquery.jgrowl.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="plugins/fileinput/css/fileinput.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="plugins/spinner/ui.spinner.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="plugins/timepicker/timepicker.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/jui/jquery.ui.css" media="screen" />
+
+<link id="ll" rel="stylesheet" type="text/css" href="css/core/form.css" media="screen" />
+
+<!-- Theme Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/mws.theme.css" media="screen" />
+
+<!-- JavaScript Plugins -->
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel-min.js"></script>
+
+<!-- jQuery-UI Dependent Scripts -->
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="plugins/spinner/ui.spinner.min.js"></script>
+<script type="text/javascript" src="plugins/timepicker/timepicker-min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+
+<!-- Plugin Scripts -->
+<script type="text/javascript" src="plugins/imgareaselect/jquery.imgareaselect.min.js"></script>
+<script type="text/javascript" src="plugins/duallistbox/jquery.dualListBox-1.3.min.js"></script>
+<script type="text/javascript" src="plugins/jgrowl/jquery.jgrowl-min.js"></script>
+<script type="text/javascript" src="plugins/fileinput/js/jQuery.fileinput.js"></script>
+<script type="text/javascript" src="plugins/fullcalendar/fullcalendar.min.js"></script>
+<script type="text/javascript" src="plugins/datatables/jquery.dataTables-min.js"></script>
+<script type="text/javascript" src="plugins/chosen/chosen.jquery.min.js"></script>
+<script type="text/javascript" src="plugins/prettyphoto/js/jquery.prettyPhoto-min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="plugins/flot/excanvas.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="plugins/colorpicker/colorpicker-min.js"></script>
+<script type="text/javascript" src="plugins/tipsy/jquery.tipsy-min.js"></script>
+<script type="text/javascript" src="plugins/sourcerer/Sourcerer-1.2-min.js"></script>
+<script type="text/javascript" src="plugins/placeholder/jquery.placeholder-min.js"></script>
+<script type="text/javascript" src="plugins/validate/jquery.validate-min.js"></script>
+
+<!-- Core Script -->
+<script type="text/javascript" src="js/mws.js"></script>
+
+<!-- Themer Script (Remove if not needed) -->
+<script type="text/javascript" src="js/themer.js"></script>
+
+<!-- Demo Scripts (remove if not needed) -->
+<script type="text/javascript" src="js/demo.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		alert(1);
+		//document.getElementById("upper_menu").style.padding="15px";
+		var load="<img src='images/ajax-loader.gif' alt='loading...' />"
+			//$("#my_sub_div").html(load).load("admin/questionairy/add_question.php");	
+		
+		$("#asset_grp").click(function(){
+			//document.getElementById("my_sub_div").style.padding="0px";
+			alert(1)
+			var load="<img src='images/ajax-loader.gif' alt='loading...' />"
+			$("#container_old").html(load).load("forms/asset_grp.php");	
+					
+		})
+		
+			
+		
+	});
+	
+	
+
+		<script type="text/javascript">
+		/////////////////////// AJAX Function Begin///////////////////////////////
+		var READY_STATE_UNINITIALIZED   = 0;
+				var READY_STATE_LOADING         = 1;
+				var READY_STATE_LOADED          = 2;
+				var READY_STATE_INTERACTIVE     = 3;
+				var READY_STATE_COMPLETE        = 4;
+				
+		function getXMLObject()  //XML OBJECT
+		{
+		   var xmlHttp = false;
+		   try {
+			 xmlHttp = new ActiveXObject("Msxml2.XMLHTTP")  // For Old Microsoft Browsers
+		   }
+		   catch (e) {
+			 try {
+			   xmlHttp = new ActiveXObject("Microsoft.XMLHTTP")  // For Microsoft IE 6.0+
+			 }
+			 catch (e2) {
+			   xmlHttp = false   // No Browser accepts the XMLHTTP Object then false
+			 }
+		   }
+		   if (!xmlHttp && typeof XMLHttpRequest != 'undefined') {
+			 xmlHttp = new XMLHttpRequest();        //For Mozilla, Opera Browsers
+		   }
+		   return xmlHttp;  // Mandatory Statement returning the ajax object created
+		}
+		 
+		var xmlhttp = new getXMLObject();	//xmlhttp holds the ajax object
+		////////////////////////////////////////////////////////////////////////////////		
+
+		function dashboard() {
+  
+		  var getdate = new Date(); 
+		  if(xmlhttp) {
+			xmlhttp.open("POST","forms/dashbooard.php",true); 
+			xmlhttp.onreadystatechange  = dashboard_Response;
+			xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xmlhttp.send(); 
+			//xmlhttp.send(); 
+			
+		  }
+		}
+		
+		function dashboard_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+					}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		   
+		}
+		
+		function add_salesman() {
+  		  
+		  var getdate = new Date(); 
+		  if(xmlhttp) {
+				xmlhttp.open("POST","forms/salesman.php",true); 
+				xmlhttp.onreadystatechange  = add_salesman_Response;
+				xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xmlhttp.send();
+		  }
+		}
+		
+		function add_salesman_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+					}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		}
+		
+		
+		function delete_salesman() {
+  		  
+		  var getdate = new Date(); 
+		  if(xmlhttp) {
+				xmlhttp.open("POST","forms/delete_salesman.php",true); 
+				xmlhttp.onreadystatechange  = delete_salesman_Response;
+				xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xmlhttp.send();
+		  }
+		}
+		
+		function delete_salesman_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+					}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		}
+		
+		function  delete_salesman_php() {
+  		  
+		  var s_name=document.getElementById("s_name").value;
+		  
+		  //alert(s_name);
+		  var getdate = new Date(); 
+		  if(xmlhttp) {
+				xmlhttp.open("POST","forms/delete_salesman_php.php",true); 
+				xmlhttp.onreadystatechange  = delete_salesman_php_Response;
+				xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xmlhttp.send("s_name="+s_name);
+		  }
+		}
+		
+		function  delete_salesman_php_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				//document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+				var str=xmlhttp.responseText;
+				if(str.indexOf("Successfully")!='-1')
+				{
+					create("default", { title:'Successful', text:str});
+				}
+				else
+				{
+				 	create("default", { title:'Failure', text:'Salesman is not deleted successfully.'});
+				}
+
+					}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		}
+		
+		function load_update_salesman() {
+  		  
+		  
+		  //alert(s_code);
+		  var getdate = new Date(); 
+		  if(xmlhttp) {
+				xmlhttp.open("POST","forms/load_update_salesman.php",true); 
+				xmlhttp.onreadystatechange  = load_update_salesman_Response;
+				xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xmlhttp.send();
+		  }
+		}
+		
+		function load_update_salesman_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+					}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		}
+		//get_salesman_data()
+		
+		function get_salesman_data() {
+  		  var salesman_code=document.getElementById("s_code").value;
+		  //alert(salesman_code);
+		  var getdate = new Date(); 
+		  if(xmlhttp) {
+				xmlhttp.open("POST","forms/get_salesman_data.php",true); 
+				xmlhttp.onreadystatechange  = get_salesman_data_Response;
+				xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xmlhttp.send("salesman_code="+salesman_code);
+		  }
+		}
+		
+		function get_salesman_data_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				//document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+				var str=xmlhttp.responseText;
+				salesman_info=str.split(",")
+				document.getElementById("s_name").value=salesman_info[0];
+			  document.getElementById("s_add1").value=salesman_info[1];
+			  document.getElementById("s_add2").value=salesman_info[2];
+			  document.getElementById("s_add3").value=salesman_info[3];
+			  document.getElementById("s_phno").value=salesman_info[4];
+			  document.getElementById("s_city").value=salesman_info[5];
+					}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		}
+
+		
+		
+		function update_salesman() {
+		  //alert(s_code);
+		  var s_code=document.getElementById("s_code").value;
+		  var s_name=document.getElementById("s_name").value;
+		  var s_add1=document.getElementById("s_add1").value;
+		  var s_add2=document.getElementById("s_add2").value;
+		  var s_add3=document.getElementById("s_add3").value;
+		  var s_phno=document.getElementById("s_phno").value;
+		  var s_city=document.getElementById("s_city").value;
+		  
+		  var getdate = new Date(); 
+		  if(xmlhttp) {
+				xmlhttp.open("POST","forms/update_salesman.php",true); 
+				xmlhttp.onreadystatechange  = update_salesman_Response;
+				xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				//xmlhttp.send();
+				xmlhttp.send("s_code="+s_code+"&s_name="+s_name+"&s_add1="+s_add1+"&s_add2="+s_add2+"&s_add3="+s_add3+"&s_phno="+s_phno+"&s_city="+s_city); 
+		  }
+		}
+		
+		function update_salesman_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				//document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+				var str=xmlhttp.responseText;
+				if(str.indexOf("Successfully")!='-1')
+				{
+					create("default", { title:'Successful', text:str});
+				}
+				else
+				{
+				 	create("default", { title:'Failure', text:'Salesman is not updated successfully.'});
+				}
+				
+				load_update_salesman();
+					}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		}
+		
+		function add_salesman_php() {
+          var s_code=document.getElementById("s_code").value;
+		  var s_name=document.getElementById("s_name").value;
+		  var s_add1=document.getElementById("s_add1").value;
+		  var s_add2=document.getElementById("s_add2").value;
+		  var s_add3=document.getElementById("s_add3").value;
+		  var s_phno=document.getElementById("s_phno").value;
+		  var s_city=document.getElementById("s_city").value;
+		 
+		  var getdate = new Date(); 
+		  if(xmlhttp) {
+			xmlhttp.open("POST","forms/salesman_php.php",true); 
+			xmlhttp.onreadystatechange  = add_salesman_php_Response;
+			xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xmlhttp.send("s_code="+s_code+"&s_name="+s_name+"&s_add1="+s_add1+"&s_add2="+s_add2+"&s_add3="+s_add3+"&s_phno="+s_phno+"&s_city="+s_city); 
+			//xmlhttp.send(); 
+			
+		  }
+		}
+		
+		function add_salesman_php_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				//document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+				var str=xmlhttp.responseText;
+				if(str.indexOf("Successfully")!='-1')
+				{
+					create("default", { title:'Successful', text:str});
+				}
+				else
+				{
+				 	create("default", { title:'Failure', text:'Salesman is not added successfully.'});
+				}
+				
+				add_salesman();
+					}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		   
+		}
+
+
+		function renew_salesman()
+		{
+			  document.getElementById("s_name").value="";
+			  document.getElementById("s_code").value="";			  
+			  document.getElementById("s_add1").value="";
+			  document.getElementById("s_add2").value="";
+			  document.getElementById("s_add3").value="";
+			  document.getElementById("s_phno").value="";
+			  document.getElementById("s_city").value="";
+			 
+		}
+		
+		function add_broker() {
+  		  var getdate = new Date(); 
+		  if(xmlhttp) {
+			xmlhttp.open("POST","forms/broker.php",true); 
+			xmlhttp.onreadystatechange  = add_broker_Response;
+			xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xmlhttp.send(); 
+			//xmlhttp.send(); 
+			
+		  }
+		}
+		
+		function add_broker_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+					}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		   
+		}
+		
+		function add_Broker_php() {
+			//alert("1");
+			
+			var b_code=document.getElementById("b_code").value;
+		  var b_name=document.getElementById("b_name").value;
+		  var b_add1=document.getElementById("b_add1").value;
+		  var b_add2=document.getElementById("b_add2").value;
+		  var b_add3=document.getElementById("b_add3").value;
+		  var b_phno=document.getElementById("b_phno").value;
+		  var b_city=document.getElementById("b_city").value;
+  		  var getdate = new Date(); 
+		  if(xmlhttp) {
+			xmlhttp.open("POST","forms/broker_php.php",true); 
+			xmlhttp.onreadystatechange  = add_broker_php_Response;
+			xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xmlhttp.send("b_code="+b_code+"&b_name="+b_name+"&b_add1="+b_add1+"&b_add2="+b_add2+"&b_add3="+b_add3+"&b_phno="+b_phno+"&b_city="+b_city); 
+			//xmlhttp.send(); 
+			
+		  }
+		}
+		
+		function add_broker_php_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				//document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+				var str=xmlhttp.responseText;
+				if(str.indexOf("Successfully")!='-1')
+				{
+					create("default", { title:'Successful', text:str});
+				}
+				else
+				{
+				 	create("default", { title:'Failure', text:'Broker is not added successfully.'});
+				}
+								
+				add_broker();
+					}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		   
+		}
+
+
+		function add_narration() {
+  		  var getdate = new Date(); 
+		  if(xmlhttp) {
+			xmlhttp.open("POST","forms/narattion.php",true); 
+			xmlhttp.onreadystatechange  = add_narration_Response;
+			xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xmlhttp.send(); 
+			//xmlhttp.send(); 
+			
+		  }
+		}
+		
+		function add_narration_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+					}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		   
+		}
+		
+		function add_narration_php() {
+			narr_no=document.getElementById("narration_no").value;
+			narr=document.getElementById("narration").value;
+			heading=document.getElementById("heading").value;
+  		  var getdate = new Date(); 
+		  if(xmlhttp) {
+			xmlhttp.open("POST","forms/narattion_php.php",true); 
+			xmlhttp.onreadystatechange  = add_narration_php_Response;
+			xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+			xmlhttp.send("narration_no="+narr_no+"&heading="+heading+"&narration="+narr); 
+			//xmlhttp.send(); 
+			
+		  }
+		}
+		
+		function add_narration_php_Response() {
+		   if (xmlhttp.readyState == 4) {
+			 if(xmlhttp.status == 200) {
+				//document.getElementById("container_old").innerHTML=xmlhttp.responseText;
+				//alert(xmlhttp.responseText);
+				var str=xmlhttp.responseText;
+				if(str.indexOf("Successfully")!='-1')
+				{
+					create("default", { title:'Successful', text:str});
+				}
+				else
+				{
+				 	create("default", { title:'Failure', text:'Narration is not added successfully.'});
+				}
+					
+					add_narration();
+			}
+			 else {
+				alert("Error during AJAX call. Please try again");
+			 }
+		   }
+		   
+		}
+		
+		</script>
+		<script type="text/javascript">
+			function create( template, vars, opts ){
+				return $container.notify("create", template, vars, opts);
+			}
+			
+			$(function(){
+				
+				$container = $("#container").notify();
+				
+				$("#default").click(function(){
+					create("default", { title:'Default Notification', text:'Example of a default notification.  I will fade out after 5 seconds'});
+				});
+				
+			});
+		</script>
+
+	</head>
+	<body>
+	<div class="clearfix" id="mws-header">
+		<div id="mws-logo-container">
+        
+        	<!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
+        	<div id="mws-logo-wrap">
+            	<img src="images/mws-logo.png" alt="mws admin" />
+			</div>
+        </div>
+	
+	</div>
+
+	<div id="mws-wrapper">
+    
+    	<!-- Necessary markup, do not remove -->
+		<div id="mws-sidebar-stitch" style='width:300px'></div>
+		<div id="mws-sidebar-bg"></div>
+        
+        <!-- Sidebar Wrapper -->
+        <div id="mws-sidebar">
+			<div id="mws-searchbox" class="mws-inset">
+            	<form action="typography.html">
+                	<input type="text" class="mws-search-input" />
+                    <input type="submit" class="mws-search-submit" />
+                </form>
+            </div>
+            
+            <!-- Main Navigation -->
+            <div id="mws-navigation">
+            	<ul>
+                	<li><a href="#" class="mws-i-24 i-home" onClick="dashboard()">Dashboard</a></li>
+					<li><a href="#" class="mws-i-24 i-chart" onClick="add_salesman()">Salesman Master</a></li>
+					<li><a href="#" class="mws-i-24 i-file-cabinet" onClick="add_narration()">Add Narration</a></li>
+					<li><a href="#" class="mws-i-24 i-chart" onClick="add_broker()">Broker Master</a></li>
+					<li>
+                		<a href="#" class="mws-i-24 i-file-cabinet">Group Management</a>
+                		<ul>
+                        	<li><a href="#" id="asset_grp">Asset Group</a></li>
+                        	<li><a href="#" id="liability">Liability Group</a></li>
+							<li><a href="#" id="pl_debit">P & L debit Group</a></li>
+							<li><a href="#" id="pl_credit">P & L credit Group</a></li>
+                        </ul> 
+                		
+                	</li>				
+					<!--<li class="active"><a href="#" class="mws-i-24 i-file-cabinet" onClick="add_narration_php()">Add Narration</a></li>-->
+           		</ul>
+			</div>
+				
+		</div>
+		
+			<div id="mws-container" class="clearfix">
+        
+        	
+			
+			<!-- Inner Container Start -->
+            <div class="container" id="container_old">
+							
+        	</div>
+			
+			
+				
+
+	</div>
+
+		
+	</div>
+
+	</body>
+</html>
